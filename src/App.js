@@ -20,13 +20,13 @@ const myheader = new Header();
 window.addEventListener("load", myheader.changeColor);
 
 //A button object calls the function:
-document.getElementById("btn").addEventListener("click", myheader.changeColor);
+//document.getElementById("btn").addEventListener("click", myheader.changeColor);
 
 
 // Array Methods
 const myArray = ['apple', 'banana', 'orange'];
 
-const myList = myArray.map((item) => <p>{item}</p>)
+const Lists = myArray.map((item) => <p>{item}</p>)
 
 //Destructing
 
@@ -39,7 +39,7 @@ function App() {
       <button id="btn">Click Me!</button>
       <p><strong>this</strong> represents:</p>
       <p id="demo"></p>
-      <div>{myList}</div>
+      <div>{Lists}</div>
     </div>
     
   );
