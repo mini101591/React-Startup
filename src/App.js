@@ -7,9 +7,9 @@ class Header {
   }
 
 //this with Regular function:
-changeColor = function() {
+//changeColor = function() {
  //this with arrow function
- //changeColor = () => {
+  changeColor = () => {
     document.getElementById("demo").innerHTML += this;
   }
 }
