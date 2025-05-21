@@ -6,10 +6,10 @@ class Header {
     this.color = "Red";
   }
 
-//Regular function:
- // changeColor = function() {
- //arrow function
- changeColor = () => {
+//this with Regular function:
+changeColor = function() {
+ //this with arrow function
+ //changeColor = () => {
     document.getElementById("demo").innerHTML += this;
   }
 }
@@ -20,7 +20,7 @@ const myheader = new Header();
 window.addEventListener("load", myheader.changeColor);
 
 //A button object calls the function:
-//document.getElementById("btn").addEventListener("click", myheader.changeColor);
+document.getElementById("btn").addEventListener("click", myheader.changeColor);
 
 
 // Array Methods
