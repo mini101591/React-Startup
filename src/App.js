@@ -60,6 +60,32 @@ function myVehicle({ model, registration: { state } }) {
   return message;
 }
 
+//Spread Operator with arrays
+const a = [1,2,3];
+const b = [4,5,6];
+const c = [...a,...b];
+
+//Spread Operator with destructing
+const x=[1,2,3,4,5,6];
+const [one,two,...rest] = x;
+
+//Spread Operator with Objects
+const myVehicles = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+}
+
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021, 
+  color: 'yellow'
+}
+
+const myUpdatedVehicle = {...myVehicles, ...updateMyVehicle};
+
+console.log(myUpdatedVehicle);
+
 function App() {
   return (
     <div className="App">
@@ -76,6 +102,10 @@ function App() {
         <li>divide={divide}</li>
         </ol>
         <p>{message}</p>
+        <p>{c}</p>
+        <span>{one}</span><br></br>
+        <span>{two}</span><br></br>
+        <span>{rest}</span>
     </div>
     
   );
