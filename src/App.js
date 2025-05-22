@@ -28,7 +28,7 @@ const myArray = ['apple', 'banana', 'orange'];
 
 const Lists = myArray.map((item) => <p>{item}</p>)
 
-//Destructing
+//Destructing with arrays
 function calculate(a, b) {
   const add = a + b;
   const subtract = a - b;
@@ -40,6 +40,25 @@ function calculate(a, b) {
 
 const [add, subtract, multiply, divide] = calculate(5,10);
 
+//Destructing with objects with nested objects
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+const message = myVehicle(vehicleOne);
+function myVehicle({ model, registration: { state } }) {
+  const message = 'My ' + model + ' is registered in ' + state + '.';
+  return message;
+}
 
 function App() {
   return (
@@ -56,6 +75,7 @@ function App() {
         <li>multiply={multiply}</li>
         <li>divide={divide}</li>
         </ol>
+        <p>{message}</p>
     </div>
     
   );
