@@ -29,6 +29,16 @@ const myArray = ['apple', 'banana', 'orange'];
 const Lists = myArray.map((item) => <p>{item}</p>)
 
 //Destructing
+function calculate(a, b) {
+  const add = a + b;
+  const subtract = a - b;
+  const multiply = a * b;
+  const divide = a / b;
+
+  return [add, subtract, multiply, divide];
+}
+
+const [add, subtract, multiply, divide] = calculate(5,10);
 
 
 function App() {
@@ -40,6 +50,12 @@ function App() {
       <p><strong>this</strong> represents:</p>
       <p id="demo"></p>
       <div>{Lists}</div>
+      <ol>
+        <li>SUM={add}</li>
+        <li>Diffrence={subtract}</li>
+        <li>multiply={multiply}</li>
+        <li>divide={divide}</li>
+        </ol>
     </div>
     
   );
