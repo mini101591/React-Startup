@@ -1,5 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
+import message from './message';  // import default
+import {name,standard,age} from './person'; //import individually
 
 class Header {
   constructor() {
@@ -54,10 +56,10 @@ const vehicleOne = {
   }
 }
 
-const message = myVehicle(vehicleOne);
+const getmessage = myVehicle(vehicleOne);
 function myVehicle({ model, registration: { state } }) {
-  const message = 'My ' + model + ' is registered in ' + state + '.';
-  return message;
+  const getmessage = 'My ' + model + ' is registered in ' + state + '.';
+  return getmessage;
 }
 
 //Spread Operator with arrays
@@ -101,11 +103,15 @@ function App() {
         <li>multiply={multiply}</li>
         <li>divide={divide}</li>
         </ol>
-        <p>{message}</p>
+        <p>{getmessage}</p>
         <p>{c}</p>
         <span>{one}</span><br></br>
         <span>{two}</span><br></br>
         <span>{rest}</span>
+        <h1>{message()}</h1>
+        <h2>My name is {name}</h2>
+        <h2>I am {age}</h2>
+        <h2>I am in standard {standard}</h2>
     </div>
     
   );
