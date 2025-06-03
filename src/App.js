@@ -88,6 +88,14 @@ const myUpdatedVehicle = {...myVehicles, ...updateMyVehicle};
 
 console.log(myUpdatedVehicle);
 
+const xa = 5;
+let text = "Goodbye";
+if (xa < 10) {
+  text = "Hello";
+}
+
+const myElement = <h1>{xa < 10 ? "Hello234" : "Goodbye"}</h1>;
+
 function App() {
   return (
     <div className="App">
@@ -112,6 +120,8 @@ function App() {
         <h2>My name is {name}</h2>
         <h2>I am {age}</h2>
         <h2>I am in standard {standard}</h2>
+        <h2>{text}</h2>
+        <h2>{myElement}</h2>
     </div>
     
   );
